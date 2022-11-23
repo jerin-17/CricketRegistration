@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />  
+    <title>Cricket team registration form</title>
+</head>
+<body>
+    <script src="./index.js" defer></script>
+    <form  action="./server.php" method="post" >
+        <h1 style="text-align: center;">Cricket team registration</h1>
+
+        <label class="text-form" for="player" >Name:</label>
+        <input class="required" type="text" id="player" name="player"  placeholder="Your name" autocomplete="" onkeyup="enableSubmit()"/>
+        <br/>
+        <label class="text-form" for="branch">Branch:</label>
+        <select id="branch" name="branch" onchange="enableSubmit()">
+            <option value="selectitem">---- please select a department ----</option>
+            <option value="CSE">Computer Science and Engineering</option>
+            <option value="ECE">Electronics and Communication</option>
+            <option value="Mech">Mechanical</option>
+            <option value="Auto">Automobile</option>
+            <option value="Production">Production</option>
+        </select>
+        <br/>
+        <label for="semester" class="text-form" >Semester</label>
+        <input type="number" class="required" min="1" max="8" id="semester" name="semester" placeholder="1-8" onchange="checksem()"/>
+        <br/>
+            <input  class="radio-form" type="radio" id="leftbat" name="bathand" value="lefthander" onchange="enableSubmit()"/>
+            <label for="leftbat">LeftHander</label>
+            <input class="radio-form" type="radio" id="rightbat" name="bathand" value="righthander" onchange="enableSubmit()"/>
+            <label for="rightbat">RightHander</label>
+        <h3>Role</h3>
+        <input class="radio-form" type="radio" id="batsman" name="specialisation" value="batsman" onclick="hiddenelements()"/>
+        <label for="batsman" >Batsman</label>
+        <input class="radio-form"  type="radio" id="bowler" name="specialisation" value="bowler" onclick="hiddenelements()"/>
+        <label for="bowler" >Bowler</label>
+
+        <div id="bat" style="display:none;" >
+        <strong>Type of batsman</strong>
+        <input class="radio-form"  type="radio" id="opener" name="battype" value="opener" onchange="enableSubmit()"/>
+        <label for="opener">Opener</label>
+        <input class="radio-form" type="radio" id="middleorder" name="battype" value="middleorder" onchange="enableSubmit()"/>
+        <label for="middleorder">Middle Order</label>
+        </div>
+        <div id="bowl" style="display:none; margin-top:5px" >
+            <strong>Type of bowler</strong>
+            <select id="bowltype" name="bowltype" onchange="enableSubmit()">
+                <option value="selectitem">--please select option--</option>
+                <option value="spinner">Spinner</option>
+                <option value="medium fast">Medium Fast</option>
+                <option value="fast">Fast</option>
+            </select>
+        </div>
+        <br/>
+        <input class="text-form" id="btn-submit"type="submit" disabled > 
+        <input  type="button" id="btn-reset" onclick="this.form.reset(); enableSubmit();"  value="Reset">
+    </form>
+     
+</body>
+</html>

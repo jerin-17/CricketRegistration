@@ -1,0 +1,17 @@
+name
+branch 
+semester
+specialisation - batsman bowler all rounder
+batsman {
+    opener
+    middle order
+    hander : left or right
+}
+bowler{
+    spinner
+    medium fast
+    fast
+    hander : left or right
+}
+
+photo
