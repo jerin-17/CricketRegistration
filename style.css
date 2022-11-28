@@ -13,12 +13,14 @@ form{
     text-align: left;
     background-color:beige;
     margin-top: 5em;
+    
 }
 
 
 input,label{
     margin-top:0.5em;
     margin-bottom:0.5em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 strong,h3{

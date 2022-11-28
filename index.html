@@ -13,7 +13,7 @@
         <h1 style="text-align: center;">Cricket team registration</h1>
 
         <label class="text-form" for="player" >Name:</label>
-        <input class="required" type="text" id="player" name="player"  placeholder="Your name" autocomplete="" onkeyup="enableSubmit()"/>
+        <input class="required" type="text" id="player" name="player" maxlength="128" placeholder="Your name" autocomplete onkeyup="enableSubmit()"/>
         <br/>
         <label class="text-form" for="branch">Branch:</label>
         <select id="branch" name="branch" onchange="enableSubmit()">
