@@ -30,7 +30,7 @@ function enableSubmit() {
     }
   }
   let sem = document.getElementById("semester").value;
-  if (sem > 9 || sem < 1) isValid = false;
+  if (sem > 8 || sem < 1) isValid = false;
   let branchValid = true;
   if (document.getElementById("branch").value === "selectitem")
     branchValid = false;
@@ -54,4 +54,12 @@ function enableSubmit() {
   let typeValid = batValid || bowlvalid;
   isValid = isValid && typeValid;
   btn.disabled = !isValid;
+}
+
+function toRegisterPage() {
+  window.location.href = "index.html";
+}
+
+function toContact() {
+  window.location.href = "contact.html";
 }
